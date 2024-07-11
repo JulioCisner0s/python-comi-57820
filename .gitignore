@@ -1,0 +1,10 @@
+# Archivos de compilacion de Python 
+__pycache__/
+*.pyc
+
+# Archivos de pipenv. Solo dejamos requirements.txt
+Pipfile
+Pipfile.lock
+
+# Deberiamos agregar la base de datos con :
+# db.sqlite3
