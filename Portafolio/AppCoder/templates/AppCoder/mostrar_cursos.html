@@ -1,0 +1,22 @@
+{% extends 'AppCoder/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+
+{% for curso in cursos %}
+    {% comment %}<li>Curso: {{ curso.nombre }} | Camada: {{ curso.camada }}</li> {% endcomment %}
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Curso: {{ curso.nombre }}</h5>
+            <p class="card-text">Camada: {{ curso.camada }}</p>
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock main %}
