@@ -1,0 +1,13 @@
+{% extends 'AppCoder/base.html' %}
+
+{% load static %}
+
+{% block title %} Busca algun curso {% endblock title %}
+
+{% block main %}
+    {% for estudiante in Estudiantes %}
+        <p>Nombre: {{ estudiante.nombre }}, Apellido: {{ estudiante.apellido }}, Email: {{ estudiante.email }}</p>
+        <a href="{% url 'EstudiantesBorrar' estudiante.pk %}">Borrar</a>
+        <a href="{% url 'ActualizarEstudiantes' estudiante.pk %}">Actualizar</a>
+    {% endfor %}
+{% endblock main %}
